@@ -82,7 +82,7 @@ fi
 ########################################################
 #|## LONI                                              #
 ########################################################
-if [ "x$(hostname)" = "xhpcnode1.utm.utoronto.ca" ]
+if [ "x$(hostname)" = "xqb1" ]
 then
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
@@ -102,8 +102,8 @@ then
     # Random
     export LC_ALL="en_US.UTF-8"
 else
-    function fromhpcnode(){
-    scp -r "santang3@hpcnode1.utm.utoronto.ca:${1}" .
+    function fromloni(){
+    scp -r "innessim@qb.loni.org:${1}" .
     }
     
     # Make conda available if manually installed
