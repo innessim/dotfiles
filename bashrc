@@ -84,6 +84,7 @@ fi
 ########################################################
 if [ "x$(hostname)" = "xqb1" ]
 then
+    export TERM='xterm'
     echo "Working"
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
