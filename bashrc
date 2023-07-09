@@ -46,8 +46,6 @@ fi
 if [[ ${platform} == 'mac' ]]; then
     export PATH="/usr/local/sbin:$PATH"
 
-    alias loni2="ssh innessim@qb.loni.org"
-
 
 ########################################################
 #|## Linux                                             #
@@ -113,6 +111,16 @@ else
         . ${HOME}/miniconda3/etc/profile.d/conda.sh 
     fi
 fi
+
+
+########################################################
+#|## Login Aliases for LONI                            #
+########################################################
+# for QB2
+alias loni2="ssh innessim@qb.loni.org"
+
+# for QB3
+alias loni3="ssh innessim@qbc.loni.org"
 
 ########################################################
 #|# General                                            #
