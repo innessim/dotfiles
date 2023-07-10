@@ -115,7 +115,7 @@ else
 fi
 
 # for QB3
-if [ "x$(hostname)" = "xqbc" ]
+if [ "x$(hostname)" = "qbc1" || "qbc2" ]
 then
     export TERM='xterm-256color'
     # >>> conda initialize >>>
