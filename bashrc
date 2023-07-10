@@ -115,9 +115,9 @@ else
 fi
 
 # for QB3
-if [ "x$(hostname)" = "qbc2" ]
+if [ "x$(hostname)" = "xqbc" ]
 then
-    export TERM='xterm'
+    export TERM='xterm-256color'
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
     __conda_setup="$('${HOME}/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
