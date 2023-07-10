@@ -137,7 +137,7 @@ then
     export LC_ALL="en_US.UTF-8"
 else
     function fromloni(){
-    scp -r "innessim@qbc.loni.org:${1}" .
+    scp -r "innessim@qbc2.loni.org:${1}" .
     }
 
     # Make conda available if manually installed
