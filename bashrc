@@ -82,7 +82,7 @@ fi
 ########################################################
 
 # for QB2
-if [[ "x$(hostname)" = "xqb1" ]]
+if [[ "x$(hostname)" =~ xqb[[:digit:]]+$ ]]
 then
     export TERM='xterm'
     # >>> conda initialize >>>
@@ -115,7 +115,7 @@ else
 fi
 
 # for QB3
-if [[ "x$(hostname)" = "xqbc1" ]]
+if [[ "x$(hostname)" =~ xqbc[[:digit:]]+$ ]]
 then
     export TERM='xterm-256color'
     # >>> conda initialize >>>
