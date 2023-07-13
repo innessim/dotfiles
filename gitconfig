@@ -1,5 +1,5 @@
 [credential]
-	helper = store
+	helper = osxkeychain
 [user]
   name = Simon Innes 
   email = simoninnesz@gmail.com
