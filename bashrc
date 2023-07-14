@@ -136,7 +136,7 @@ then
     # Random
     export LC_ALL="en_US.UTF-8"
 else
-    function fromloni(){
+    function fromloni3(){
     scp -r "innessim@qbc.loni.org:${1}" .
     }
 
