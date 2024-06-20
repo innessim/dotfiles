@@ -216,23 +216,6 @@ parse_git_branch() {
 
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\]:\w\[\033[31m\]$(parse_git_branch)\[\033[01;34m\]$\[\033[00m\] '
 
-# have to stay here before setting PS1
-# export GIT_PS1_SHOWDIRTYSTATE=true
-# export export GIT_PS1_SHOWSTASHSTATE=true
-
-# # set a fancy prompt
-# declare -F | grep __git_ps1 > /dev/null
-# if [ "$?" -eq 0 ]
-# then
-    # echo ${platform}
-        # export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\]:\w\[\033[31m\]$(__git_ps1 "(%s)")\[\033[01;34m\]$\[\033[00m\] '
-# else
-    # if [[ ${platform} == 'mac' ]]; then
-        # export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\]:\w\[\033[31m\]$(parse_git_branch)\[\033[01;34m\]$\[\033[00m\] '
-    # else
-        # export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\]:\w\[\033[31m\]\[\033[01;34m\]$\[\033[00m\] '
-    # fi
- #fi
 
 # set bash to vi mode
 # (hit ESC for command mode/
