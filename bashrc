@@ -147,6 +147,39 @@ else
     fi
 fi
 
+# for QB4
+if [[ "x$(hostname)" =~ xqbd[[:digit:]]+$ ]]
+then
+    export TERM='xterm-256color'
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('${HOME}/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]; then
+ . "/${HOME}/miniconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
+        else
+ export PATH="${HOME}/miniconda3/bin:$PATH"  # commented out by conda initialize
+        fi
+    fi
+    unset __conda_setup
+    # <<< conda initialize <<<
+
+    # Random
+    export LC_ALL="en_US.UTF-8"
+else
+    function fromloni4(){
+    scp -r "innessim@qbd.loni.org:${1}" .
+    }
+
+    # Make conda available if manually installed
+    if [ -d "${HOME}/miniconda3"  ]
+    then
+ . ${HOME}/miniconda3/etc/profile.d/conda.sh  # commented out by conda initialize
+    fi
+fi
+
 
 ########################################################
 #|## Login Aliases for LONI                            #
@@ -156,6 +189,9 @@ alias loni2="ssh innessim@qb.loni.org"
 
 # for QB3
 alias loni3="ssh innessim@qbc.loni.org"
+
+# for QB4
+alias loni4="ssh -X innessim@qbd.loni.org"
 
 ########################################################
 #|# General                                            #
