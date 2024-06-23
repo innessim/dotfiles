@@ -84,7 +84,7 @@ fi
 # for QB2
 if [[ "x$(hostname)" =~ xqb[[:digit:]]+$ ]]
 then
-    export TERM='xterm-256color'
+    export TERM='xterm'
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
     __conda_setup="$('${HOME}/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
