@@ -42,9 +42,9 @@
      </code>
    </pre>
 
-7. When making any edits to GitHub files, create access token from GitHub web page when asked for authentification.
+7. When making edits to GitHub files, create access token from GitHub web page when asked for authentification.
 <pre>
-   a.
+   a. 
 </pre>
 <pre>
    b.
