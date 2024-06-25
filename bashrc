@@ -279,9 +279,4 @@ alias spath="tr ':' '\n' <<< "$PATH" | less" # Split PATH by newline
 alias vi=vim
 alias vim="vim -O"
 
-pman() { # view man pages the fancy way
-  tmp=$(mktemp); man -t $1  | ps2pdf - ${tmp} && xpdf -z 'width' -g 1280x1000 ${tmp} && rm ${tmp};
-};
 
-
-[ -f "/Users/jamessantangelo/.ghcup/env" ] && source "/Users/jamessantangelo/.ghcup/env" # ghcup-env
