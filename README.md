@@ -63,12 +63,12 @@
 8. When making edits to GitHub files, create access token from GitHub web page when asked for authentification.
    <pre>
    a. Generate access token.
-      - Hit profile icon in top right corner
+      - Click profile icon in top right corner
       - Scroll down to "Settings"
       - Scroll down to "Developer settings"
-      - Hit "Personal access tokens"
+      - Click "Personal access tokens"
       - Select "Tokens (classic)"
-      - Hit "Generate new token"
+      - Click "Generate new token"
       - Select "Generate new token (classic)"
       - Name your token in "Note"
       - Select "no expiration"
