@@ -43,7 +43,7 @@
 ```
 
 8. When making edits to GitHub files, create access token from GitHub web page when asked for authentification.
-   <pre>
+<pre>
    a. Generate access token.
       - Click profile icon in top right corner
       - Scroll down to "Settings"
@@ -60,7 +60,7 @@
    b. When asked for authentification:
       - Username: my_username
       - Password: "Paste access token"
-   </pre>
+</pre>
 
 Install additional software with conda.
 ```
