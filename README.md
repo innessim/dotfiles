@@ -1,64 +1,46 @@
-<b>TIPS</b>
-1. Install miniconda. 
-   <pre>
-      <code>
-         mkdir -p ~/miniconda3
-         wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-         bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-         rm -rf ~/miniconda3/miniconda.sh
-      </code>
-   </pre>
-   <pre>
-      <code>
-         ~/miniconda3/bin/conda init bash
-      </code>
-   </pre>
+## TIPS
+1. Install miniconda.
+```
+   mkdir -p ~/miniconda3
+   wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+   bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+   rm -rf ~/miniconda3/miniconda.sh
+```
+```
+   ~/miniconda3/bin/conda init bash
+```
    This example code is for the current version although updates should be checked for at this URL.
-   <pre>
-      https://docs.anaconda.com/free/miniconda/
-   </pre>
+<pre>   https://docs.anaconda.com/free/miniconda/   </pre>
 
 2. Create GitHub directory.
-   <pre>
-     <code>
-       mkdir github-repos
-     </code>
-   </pre>
+```
+   mkdir github-repos
+```
 
 3. Initialize an existing directory as a Git repository.
-   <pre>
-     <code>
-       ~/github-repos$ git init
-     </code>
-   </pre>
+```
+   ~github-repos$ git init
+```
 
 4. Clone existing repository via URL.
-   <pre>
-     <code>
-       ~/github-repos$ git clone https://github.com/innessim/dotfiles.git
-     </code>
-   </pre>
+```
+   ~/github-repos$ git clone https://github.com/innessim/dotfiles.git
+```
 
 5. Run bash script to create symlinks (symbolic links) to dotfiles.
-   <pre>
-     <code>
-       ~/github-repos$ bash dotfiles/scripts/create_symlinks.sh
-     </code>
-   </pre>
+```
+   ~/github-repos$ bash dotfiles/scripts/create_symlinks.sh
+```
 
 6. Source bashrc.
-   <pre>
-     <code>
-       source ~/.bashrc
-     </code>
-   </pre>
+```
+   source ~/.bashrc
+```
 
 7. Copy colour scheme and syntax settings of text editor to ~/.vim.
-   <pre>
-     <code>
-       ~/github-repos$ cp dotfiles/vim/colors/ dotfiles/vim/syntax/ ~/.vim -r
-     </code>
-   </pre>
+```
+   ~/github-repos$ cp dotfiles/vim/colors/ dotfiles/vim/syntax/ ~/.vim -r
+```
 
 8. When making edits to GitHub files, create access token from GitHub web page when asked for authentification.
    <pre>
@@ -79,3 +61,8 @@
       - Username: my_username
       - Password: "Paste access token"
    </pre>
+
+Install additional software with conda.
+```
+   conda install conda-forge::mamba
+```
