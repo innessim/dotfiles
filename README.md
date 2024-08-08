@@ -19,7 +19,7 @@
 
 3. Initialize an existing directory as a Git repository.
 ```
-   ~github-repos$ git init
+   ~/github-repos$ git init
 ```
 
 4. Clone existing repository via URL.
