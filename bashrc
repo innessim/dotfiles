@@ -197,8 +197,8 @@ alias loni3="ssh innessim@qbc.loni.org"
 
 # for QB4
 alias loni4="ssh -X innessim@qbd.loni.org"
-alias loni41="ssh -X innessim@qbd1.long.org"
-alias loni42="ssh -X innessim@qbd2.long.org"
+alias loni41="ssh -X innessim@qbd1.loni.org"
+alias loni42="ssh -X innessim@qbd2.loni.org"
 
 ########################################################
 #|# General                                            #
