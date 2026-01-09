@@ -262,6 +262,8 @@ alias d='date'
 alias v='vim'
 alias eb='vim ~/.bashrc'
 alias kk='kill %'
+alias less='less -S'
+alias python='python3'
 
 # alias top='htop -d 1'
 alias ..="cd .."
