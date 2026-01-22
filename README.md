@@ -17,19 +17,20 @@
    mkdir github-repos
 ```
 
-3. Initialize an existing directory as a Git repository.
+3. Go to and initialize an existing directory as a Git repository.
 ```
-   ~/github-repos$ git init
+   cd github-repos
+   git init
 ```
 
 4. Clone existing repository via URL.
 ```
-   ~/github-repos$ git clone https://github.com/innessim/dotfiles.git
+   git clone https://github.com/innessim/dotfiles.git
 ```
 
 5. Run bash script to create symlinks (symbolic links) to dotfiles.
 ```
-   ~/github-repos$ bash dotfiles/scripts/create_symlinks.sh
+   bash dotfiles/scripts/create_symlinks.sh
 ```
 
 6. Source bashrc.
@@ -39,7 +40,7 @@
 
 7. Copy colour scheme and syntax settings of text editor to ~/.vim.
 ```
-   ~/github-repos$ cp dotfiles/vim/colors/ dotfiles/vim/syntax/ ~/.vim -r
+   cp dotfiles/vim/colors/ dotfiles/vim/syntax/ ~/.vim -r
 ```
 
 8. When making edits to GitHub files, create access token from GitHub web page when asked for authentification.
