@@ -67,3 +67,102 @@ Install additional software with conda.
 ```
    conda install conda-forge::mamba
 ```
+
+### tmux resurrection
+The tmux prefix in this `tmux.conf` is `Ctrl-a`.
+#### Installing on new machine
+Install tmux plugin manager (TPM):
+```
+   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+Create the resurrect directory:
+```
+   mkdir -p ~/.tmux/resurrect
+```
+Start tmux: `tmux` 
+
+reload configuration: `Ctrl-a r`
+
+
+and install the configured plugins if this does not happen automatically: `Ctrl-a Shift-I`
+
+#### tmux
+Tmux configuration is managed through this repository:
+```
+   ~/github-repos/dotfiles/tmux.conf
+```
+with symlink to:
+```
+   ~/.tmux.conf
+```
+
+#### Configuration
+The `tmux.conf` includes personal key bindings and preferences, along with TPM and session persistence:
+```
+   # restore tmux sessions
+   # TPM / sessions
+   set -g @plugin 'tmux-plugins/tpm'
+   set -g @plugin 'tmux-plugins/tmux-resurrect'
+   set -g @plugin 'tmux-plugins/tmux-continuum'
+
+   # Automatically save every 15 minutes and restore on tmux startup
+   set -g @resurrect-dir '~/.tmux/resurrect'
+   set -g @continuum-save-interval '15'
+   set -g @continuum-restore 'on'
+
+   # Initialize TPM (must be last)
+   run '~/.tmux/plugins/tpm/tpm'
+```
+The tmux prefix in this `tmux.conf` is `Ctrl-a`.
+
+#### Plugins
+Plugins are managed with TPM:
+> - `tmux-resurrect` — saves and restores tmux sessions across server restarts
+> - `tmux-continuum` — automatically saves the tmux server state every 15 minutes and restores it when tmux starts
+
+Plugins are installed separately under:
+```
+   ~/.tmux/plugins
+```
+
+#### Session persistence
+Resurrect saves are stored locally in:
+```
+   ~/.tmux/resurrect/
+```
+This directory is intentionally not track by Git because the saved session state is specific to the machine.
+
+
+The saved state includes multiple tmux sessions, as well as their windows, panes, working directories, and other session information.
+
+
+To manually save the current tmux server state: `Ctrl-a Ctrl-s`
+
+
+To manually restore it: `Ctrl-a Ctrl-r`
+
+
+With Continuum enabled, the entire tmux server is automatically saved every 15 minutes. After a server restart, start tmux noramlly:
+```
+   tmux
+```
+This should automatically restore the saved sessions.
+
+
+If automatic restoration does not occur, use: `Ctrl-a Ctrl-r`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
